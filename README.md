@@ -105,5 +105,5 @@ python edge2image.py \
   --input_dir combine \
   --checkpoint edges2shoesModel
 ```
-The test run will output an HTML file at `edges2shoesbyyourself_result/index.html` that shows input/output/target image sets. Notice that if you draw the edge image, the target label in the result HTML file has no actual meaning, it just unification.
+The test run will output an HTML file at `edges2shoesbyyourself_result/index.html` that shows input/output/target image sets. Notice that if you draw the edge image, the target label in the result HTML file has no actual meaning, it is just for unification.
 You could also check the original output picture file named fileame+ "-outputs.png" extension in `edges2shoesbyyourself_result/images/` folder.  
