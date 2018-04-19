@@ -74,7 +74,7 @@ Unzip the pre-train model and then copy this 'edges2shoesModel' folder to 'edge2
 
 Draw an edge picuture like delow:
 
-<img src="docs/test1.png" width="256px"/>
+<img src="doc/test1.png" width="256px"/>
 
 And then copy your picture to the "doc" folder
 
