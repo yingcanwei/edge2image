@@ -28,27 +28,12 @@ Unzip the pre-train model and then copy this 'edges2shoesModel' folder to 'edge2
 # test the model
 python edge2image.py \
   --mode test \
-  --output_dir edges2shoesDemoresult \
+  --output_dir edges2shoesDemo_result \
   --input_dir edges2shoesDemotest \
   --checkpoint edges2shoesModel
 ```
 
-```sh
-# clone this repo
-git clone https://github.com/yingcanwei/edge2image.git
-cd edge2image
-```
-Download the Pre-trained model: [edges2shoesModel.zip](https://drive.google.com/file/d/14WROFTs4unFS4PfOeSJw7v-YWWxMasao/view)
-Unzip the pre-train model and then copy this 'edges2shoesModel' folder to 'edge2image' folder 
-
-```sh
-# test the model
-python edge2image.py \
-  --mode test \
-  --output_dir edges2shoesDemoresult \
-  --input_dir edges2shoesDemotest/val \
-  --checkpoint edges2shoesModel
-```
+The test run will output an HTML file at `edges2shoes_result/index.html` that shows input/output/target image sets.
 
 ### Getting Started from Scratch(Train Model by yourself)
 
