@@ -81,6 +81,11 @@ And then copy your picture to the "doc" folder
 Next, you need pre-process the picure draw by yourself to fit model input requirments as below:
 
 ```sh
+＃Create necessary meta and output folder
+mkdir ./resize
+mkdir ./gray
+mkdir ./combine
+
 # pre-process the picture
 python ./tools/process.py 
 --operation all 
@@ -90,7 +95,7 @@ python ./tools/process.py
 --output_dir ./combine
 ```
 
-The processed output file will be generate to folder named "combine" 
+The pre-processed file will be generate to folder named "combine" 
 
 ```sh
 # test your picture
