@@ -34,8 +34,9 @@ python edge2image.py \
 ```
 
 The test run will output an HTML file at `edges2shoes_result/index.html` that shows input/output/target image sets.
+You could also check the original output picture file named fileame+ "-outputs.png" extension in `edges2shoes_result/images/` folder.  
 
-### Getting Started from Scratch(Train Model by yourself)
+### Getting Started from Scratch(Train Model by yourself) 
 
 ```sh
 # clone this repo
