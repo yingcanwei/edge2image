@@ -61,5 +61,44 @@ python edge2image.py \
 
 The test run will output an HTML file at `edges2shoes_test/index.html` that shows input/output/target image sets.
 
+### Getting Started from any edge picture (Draw an edge picture by yourself) 
+This part instruction is used to test an picture that draw by yourself.
 
+```sh
+# clone this repo
+git clone https://github.com/yingcanwei/edge2image.git
+cd edge2image
+```
+Download the Pre-trained model: [edges2shoesModel.zip](https://drive.google.com/file/d/14WROFTs4unFS4PfOeSJw7v-YWWxMasao/view)
+Unzip the pre-train model and then copy this 'edges2shoesModel' folder to 'edge2image' folder 
 
+Draw an edge picuture like delow:
+
+<img src="docs/test1.png" width="256px"/>
+
+And then copy your picture to the "doc" folder
+
+Next, you need pre-process the picure draw by yourself to fit model input requirments as below:
+
+```sh
+# pre-process the picture
+python ./tools/process.py 
+--operation all 
+--pad --input_dir ./doc \
+--resize_dir ./resize  \
+--gray_dir ./gray \
+--output_dir ./combine
+```
+
+The processed output file will be generate to folder named "combine" 
+
+```sh
+# test your picture
+python edge2image.py \
+  --mode test \
+  --output_dir edges2shoesbyyourself_result \
+  --input_dir combine \
+  --checkpoint edges2shoesModel
+```
+The test run will output an HTML file at `edges2shoesbyyourself_result/index.html` that shows input/output/target image sets.
+You could also check the original output picture file named fileame+ "-outputs.png" extension in `edges2shoesbyyourself_result/images/` folder.  
