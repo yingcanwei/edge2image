@@ -4,12 +4,53 @@ This project uses a conditional generative adversarial network (cGAN) to learn a
 ## Setup
 
 ### Prerequisites
-- Tensorflow 1.4.1
+- Tensorflow 1.4.1,Python 2.7 or above
 
 ### Recommended
 - Linux with Tensorflow (GPU edition + cuDNN will be better)
 
+### Using Pre-traied model that we have already trained before.
+As tarin a model will  take more than 48 hours depending on GPU, on CPU you will be waiting for a bit.
+Therefore, we  provided an pre-trained model for you just for testing
+
 ### Getting Started
+There are also links to pre-trained models alongside for edge2shoes dataset, note that the pre-trained models require the current version of edge2image.py
+
+```sh
+# clone this repo
+git clone https://github.com/yingcanwei/edge2image.git
+cd edge2image
+```
+Download the Pre-trained model: [edges2shoesModel.zip](https://drive.google.com/file/d/14WROFTs4unFS4PfOeSJw7v-YWWxMasao/view)
+Unzip the pre-train model and then copy this 'edges2shoesModel' folder to 'edge2image' folder 
+
+```sh
+# test the model
+python edge2image.py \
+  --mode test \
+  --output_dir edges2shoesDemoresult \
+  --input_dir edges2shoesDemotest \
+  --checkpoint edges2shoesModel
+```
+
+```sh
+# clone this repo
+git clone https://github.com/yingcanwei/edge2image.git
+cd edge2image
+```
+Download the Pre-trained model: [edges2shoesModel.zip](https://drive.google.com/file/d/14WROFTs4unFS4PfOeSJw7v-YWWxMasao/view)
+Unzip the pre-train model and then copy this 'edges2shoesModel' folder to 'edge2image' folder 
+
+```sh
+# test the model
+python edge2image.py \
+  --mode test \
+  --output_dir edges2shoesDemoresult \
+  --input_dir edges2shoesDemotest/val \
+  --checkpoint edges2shoesModel
+```
+
+### Getting Started from Scratch(Train Model by yourself)
 
 ```sh
 # clone this repo
@@ -33,5 +74,6 @@ python edge2image.py \
 ```
 
 The test run will output an HTML file at `edges2shoes_test/index.html` that shows input/output/target image sets.
+
 
 
